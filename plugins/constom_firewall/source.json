@@ -1,0 +1,15 @@
+{
+  "id": "custom_firewall",
+  "name": "Custom Firewall",
+  "vendor": "DemoVendor",
+  "product": "CustomFirewall",
+  "format": "json",
+  "version": "1.0",
+  "field_mappings": {
+    "source": "network.source.ip",
+    "destination": "network.destination.ip",
+    "sourcePort": "network.source.port",
+    "destinationPort": "network.destination.port",
+    "decision": "event.action"
+  }
+}

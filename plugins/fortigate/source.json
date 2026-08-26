@@ -1,0 +1,16 @@
+{
+  "id": "fortigate",
+  "name": "FortiGate Firewall",
+  "vendor": "Fortinet",
+  "product": "FortiGate",
+  "format": "syslog",
+  "version": "1.0",
+  "field_mappings": {
+    "srcip": "network.source.ip",
+    "dstip": "network.destination.ip",
+    "srcport": "network.source.port",
+    "dstport": "network.destination.port",
+    "action": "event.action",
+    "proto": "network.protocol"
+  }
+}

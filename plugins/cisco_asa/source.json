@@ -1,0 +1,15 @@
+{
+  "id": "cisco_asa",
+  "name": "Cisco ASA",
+  "vendor": "Cisco",
+  "product": "ASA",
+  "format": "syslog",
+  "version": "1.0",
+  "field_mappings": {
+    "src": "network.source.ip",
+    "dst": "network.destination.ip",
+    "spt": "network.source.port",
+    "dpt": "network.destination.port",
+    "action": "event.action"
+  }
+}
