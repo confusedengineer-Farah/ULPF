@@ -65,6 +65,18 @@ class PluginManager:
 
         return self.plugins.get(plugin_id)
 
+    def get_mapping(
+        self,
+        plugin_id: str
+    ) -> dict[str, str]:
+
+        plugin = self.get_plugin(plugin_id)
+
+        if not plugin:
+            return {}
+
+        return plugin.get("field_mappings", {})
+
     def list_plugins(self) -> list[dict[str, Any]]:
 
         return list(self.plugins.values())

@@ -5,7 +5,7 @@ from app.parsers.json_parser import JSONParser
 from app.parsers.cef_parser import CEFParser
 from app.parsers.syslog_parser import SyslogParser
 from app.parsers.generic_parser import GenericParser
-
+from app.parsers.csv_parser import CSVParser
 
 class ParserRegistry:
 
@@ -14,6 +14,7 @@ class ParserRegistry:
             LogFormat.JSON: JSONParser(),
             LogFormat.CEF: CEFParser(),
             LogFormat.SYSLOG: SyslogParser(),
+            LogFormat.CSV: CSVParser(),
             LogFormat.UNKNOWN: GenericParser(),
         }
 

@@ -5,6 +5,15 @@
   "product": "ASA",
   "format": "syslog",
   "version": "1.0",
+  "match": {
+    "required_fields": [
+      "src",
+      "dst",
+      "spt",
+      "dpt",
+      "action"
+    ]
+  },
   "field_mappings": {
     "src": "network.source.ip",
     "dst": "network.destination.ip",

@@ -24,7 +24,7 @@ class EventInfo(BaseModel):
     category: str | None = None
     type: str | None = None
     action: str | None = None
-    severity: str | int | None = None
+    severity: int | str | None = None
 
 
 class RawInfo(BaseModel):
@@ -48,6 +48,9 @@ class UniversalEvent(BaseModel):
     event: EventInfo = Field(default_factory=EventInfo)
 
     network: NetworkInfo = Field(default_factory=NetworkInfo)
+
+    # Vendor-specific / currently unmapped fields
+    extensions: dict[str, Any] = Field(default_factory=dict)
 
     raw: RawInfo
 

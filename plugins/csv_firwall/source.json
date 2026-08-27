@@ -1,0 +1,26 @@
+{
+  "id": "csv_firewall",
+  "name": "CSV Firewall",
+  "vendor": "CSVVendor",
+  "product": "CSVFirewall",
+  "format": "csv",
+  "version": "1.0",
+  "match": {
+    "required_fields": [
+      "source_ip",
+      "destination_ip",
+      "source_port",
+      "destination_port",
+      "protocol",
+      "action"
+    ]
+  },
+  "field_mappings": {
+    "source_ip": "network.source.ip",
+    "destination_ip": "network.destination.ip",
+    "source_port": "network.source.port",
+    "destination_port": "network.destination.port",
+    "protocol": "network.protocol",
+    "action": "event.action"
+  }
+}

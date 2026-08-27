@@ -1,15 +1,26 @@
 {
   "id": "custom_firewall",
   "name": "Custom Firewall",
-  "vendor": "DemoVendor",
-  "product": "CustomFirewall",
-  "format": "json",
+  "vendor": "TestVendor",
+  "product": "Firewall",
+  "format": "cef",
   "version": "1.0",
+  "match": {
+    "required_fields": [
+      "src",
+      "dst",
+      "spt",
+      "dpt",
+      "proto",
+      "action"
+    ]
+  },
   "field_mappings": {
-    "source": "network.source.ip",
-    "destination": "network.destination.ip",
-    "sourcePort": "network.source.port",
-    "destinationPort": "network.destination.port",
-    "decision": "event.action"
+    "src": "network.source.ip",
+    "dst": "network.destination.ip",
+    "spt": "network.source.port",
+    "dpt": "network.destination.port",
+    "proto": "network.protocol",
+    "action": "event.action"
   }
 }

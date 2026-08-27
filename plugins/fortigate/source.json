@@ -5,6 +5,16 @@
   "product": "FortiGate",
   "format": "syslog",
   "version": "1.0",
+  "match": {
+    "required_fields": [
+      "srcip",
+      "dstip",
+      "srcport",
+      "dstport",
+      "action",
+      "proto"
+    ]
+  },
   "field_mappings": {
     "srcip": "network.source.ip",
     "dstip": "network.destination.ip",
